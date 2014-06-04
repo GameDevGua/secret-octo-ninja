@@ -32,7 +32,7 @@ public class Queen {
 	
 private boolean isMoveValid(int arrival_x, int arrival_y){
 	
-	//If the square we want to go is on the same raw and is within bound :
+	//If the square we want to go is on the same row and is within bound :
 	if( (arrival_y == y) && (arrival_x <= 7 )&& (arrival_x >= 0)){
 		
 		return true;
