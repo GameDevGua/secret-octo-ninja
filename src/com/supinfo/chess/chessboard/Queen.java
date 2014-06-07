@@ -1,34 +1,22 @@
 package com.supinfo.chess.chessboard;
 
-public class Queen {
-	
-	private int x;
-	private int y;
-	private String color;
+public class Queen extends Case{
 	
 	
-	//CONSTRUCTOR :
+	
+									//CONSTRUCTOR :
 	
 	
-	public Queen(String colorPlayer){
+	
+	public Queen(int start_x, int start_y , String colorOfCase){
 		
-		if(colorPlayer == "white"){
-			
-			x = 5;
-			y = 0;
-			color = "white";
-		}
-		
-		else{
-			
-			x = 5;
-			y = 7;
-			color = "black";
-		}
+		super(start_x, start_y, colorOfCase);
 	}
 	
 	
-	//METHOD :
+										//METHODS :
+	
+	
 	
 private boolean isMoveValid(int arrival_x, int arrival_y){
 	

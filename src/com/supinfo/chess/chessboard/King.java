@@ -2,30 +2,18 @@ package com.supinfo.chess.chessboard;
 
 public class King extends Case{
 	
-	private int x;
-	private int y;
-	private String color;
 	
+									//CONSTRUCTOR
 	
-	//CONSTRUCTOR
-	public King(String colorPlayer){
+	public King(int start_x, int start_y,String colorOfCase){
 		
-		if(colorPlayer == "white"){
-			
-			x = 4;
-			y = 0;
-			color ="white";
-		}
+		super(start_x , start_y, colorOfCase);
 		
-		else if (colorPlayer == "black"){
-			x = 4;
-			y = 7;
-			color = "black";
-		}
 	}
 	
 	
-	//METHOD :
+									//METHODS :
+	
 	
 	
 	private boolean isMoveValid(int arrival_x, int arrival_y){
