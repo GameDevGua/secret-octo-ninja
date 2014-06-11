@@ -18,28 +18,33 @@ public class King extends Case{
 	
 	private boolean isMoveValid(int arrival_x, int arrival_y){
 		
+		//If the square we want to go is not within bound :
+		if(this.isWithinBound(arrival_x, arrival_y) == false){
+			return false;
+		}
+		
 		//If the square we want to go to is on the same row and is within bound :
 		
 		if(arrival_y == y){
 			
-			if(arrival_x == x+1 && arrival_x <=7){
+			if(arrival_x == x+1 ){
 				return true;
 			}
 			
-			if(arrival_x == x-1 && arrival_x >=0){
+			if(arrival_x == x-1 ){
 				return true;
 			}
 		}
 			
 			//If the square we want to go to is one row below the king and is within bound:
 			
-			else if((arrival_y == y+1 && arrival_y <=7)){
+			else if(arrival_y == y+1 ){
 				
-				if(arrival_x == x+1 && arrival_x <=7){
+				if(arrival_x == x+1 ){
 					return true;
 				}
 				
-				if(arrival_x == x-1 && arrival_x >=0){
+				if(arrival_x == x-1 ){
 					return true;
 				}
 				
@@ -51,13 +56,13 @@ public class King extends Case{
 			
 			//If the square we want to go to is one row above the king and is within bound :
 			
-			else if(arrival_y == y -1 && arrival_y >= 0){
+			else if(arrival_y == y -1 ){
 				
-				if(arrival_x == x+1 && arrival_x <=7){
+				if(arrival_x == x+1 ){
 					return true;
 				}
 				
-				if(arrival_x == x-1 && arrival_x >=0){
+				if(arrival_x == x-1 ){
 					return true;
 				}
 				

@@ -20,5 +20,20 @@ public class Case implements Piece {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public boolean isWithinBound(int arrival_x, int arrival_y) {
+
+		if ((arrival_x >= 0 && arrival_x <= 7)
+				&& (arrival_y >= 0 && arrival_y <= 7)) {
+
+			return true;
+
+		}
+
+		else {
+			return false;
+		}
+
+	}
 
 }

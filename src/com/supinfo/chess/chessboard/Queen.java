@@ -20,21 +20,27 @@ public class Queen extends Case{
 	
 private boolean isMoveValid(int arrival_x, int arrival_y){
 	
+	//If the square we want to go is not within bound :
+	
+	if(this.isWithinBound(arrival_x, arrival_y) == false){
+		return false;
+	}
+	
 	//If the square we want to go is on the same row and is within bound :
-	if( (arrival_y == y) && (arrival_x <= 7 )&& (arrival_x >= 0)){
+	if( arrival_y == y){
 		
 		return true;
 	}
 	
 	//If the square we want to go is on the same column and is within bound : 
 	
-	if( (arrival_x == x) && (arrival_y >= 0 ) && (arrival_y <=7)){
+	if( arrival_x == x){
 		return true;
 	}
 	
 	//If the square we want to go to is on the same diagonal an is within bound :
 	
-	if( (arrival_x >=0 && arrival_x <=7 )&& (arrival_y >=0 && arrival_y <=7) && (arrival_x - x ) == (arrival_y - y)){
+	if( (arrival_x - x ) == (arrival_y - y) ){
 		
 		return true;
 	}

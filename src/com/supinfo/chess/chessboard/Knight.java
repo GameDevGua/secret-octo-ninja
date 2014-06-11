@@ -23,13 +23,19 @@ public class Knight extends Case{
 	private boolean isMoveValid(int arrival_x, int arrival_y){			//This method checks if a move is correct 
 		
 		
+		//If the square we want to go is not within bound :
+		
+		if(this.isWithinBound(arrival_x, arrival_y) == false){
+			return false;
+		}
+		
 		//If the square we want to go to is two square on right or on the left :
 		
-		if( (arrival_x == x + 2 && arrival_x <=7) || (arrival_x == x-2 && arrival_x >=0) ){
+		if( (arrival_x == x + 2 ) || (arrival_x == x-2 ) ){
 			
 			//....And one row above or below:
 			
-			if((arrival_y == y +1 && arrival_y <=7) || (arrival_y == y-1 && arrival_y >=0)){
+			if((arrival_y == y +1 ) || (arrival_y == y-1 )){
 				return true;
 			}
 			else{
@@ -41,11 +47,11 @@ public class Knight extends Case{
 		
 		//If the square we want to go to is two squares above  or two squares below :
 		
-		if( (arrival_y == y+2 && arrival_y <=7) || (arrival_y == y-2 && arrival_y >=0)){
+		if( (arrival_y == y+2 ) || (arrival_y == y-2 )){
 			
 			//....And one square on the right or left :
 			
-			if( (arrival_x == x-1 && arrival_x >=0)  || ( arrival_x == x+1 && arrival_x <=7)){
+			if( (arrival_x == x-1 )  || ( arrival_x == x+1 )){
 				
 				return true;
 			}
